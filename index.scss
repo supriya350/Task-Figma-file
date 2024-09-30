@@ -1,0 +1,2995 @@
+@use "utils" as *;
+@use "global" as *;
+
+.best-product-landing {
+  &.main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255 255 255);
+    overflow: hidden;
+  }
+
+  .heroSection {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255 255 255);
+  }
+
+  .backgroundImage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1920px;
+    height: 1041px;
+    background: var(--src) 100% 0% / 99.94% no-repeat;
+    transform: translate(-50%, 0);
+
+    @include md {
+      top: -281px;
+    }
+
+    @include sm {
+      top: -278px;
+    }
+
+    @include xs {
+      top: -262px;
+    }
+
+    @include xxs {
+      top: -233px;
+    }
+
+    @include tn {
+      top: -405px;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 246px;
+    height: 78px;
+    object-fit: cover;
+    transform: translate(-50%, 0);
+
+    @include xl {
+      right: unset;
+    }
+
+    @include lg {
+      top: 140px;
+    }
+
+    @include xs {
+      top: 102px;
+    }
+
+    @include xxs {
+      top: 48px;
+    }
+
+    @include tn {
+      top: 38px;
+    }
+  }
+
+  .navigationContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 168px 0;
+    margin: 58px auto 357px;
+    width: 1120.5px;
+    max-width: 85%;
+
+    @include md {
+      gap: 150px 0;
+      margin: 58px auto 150px;
+    }
+
+    @include xs {
+      gap: 80px 0;
+      margin: 58px auto 80px;
+    }
+
+    @include xxs {
+      margin: 28px auto 80px;
+    }
+
+    @include tn {
+      gap: 70px 0;
+      margin: 30px auto 50px;
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+
+    @include xxs {
+      flex-direction: column;
+      gap: 30px 10px;
+    }
+  }
+
+  .navList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    width: 402.5px;
+    min-width: 0;
+
+    @include sm {
+      width: 312.5px;
+    }
+
+    @include xxs {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+
+    @include tn {
+      column-gap: 8px;
+    }
+  }
+
+  .navItem {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+    font: 400 15px/1.86 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    letter-spacing: 0.2px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+
+  .navItem:hover {
+    transform: scale(1.1);
+  }
+
+  .socialIcons {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+    width: 171px;
+    min-width: 0;
+
+    @include sm {
+      column-gap: 10px;
+      width: 131px;
+    }
+
+    @include xs {
+      column-gap: 16px;
+    }
+
+    @include xxs {
+      display: none;
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+
+    @include tn {
+      column-gap: 8px;
+    }
+  }
+
+  .socialIcon {
+    width: 41px;
+    min-width: 0;
+    height: 41px;
+    object-fit: cover;
+  }
+
+  .heroContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 731px;
+    max-width: 85%;
+  }
+
+  .heroTitle {
+    display: flex;
+    justify-content: center;
+    width: 85.5%;
+    font: 600 74px/1.13 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 52px;
+    }
+
+    @include sm {
+      width: 100%;
+    }
+
+    @include xxs {
+      font-size: 56px;
+    }
+
+    @include tn {
+      font-size: 40px;
+    }
+  }
+
+  .secondaryTitle {
+    display: flex;
+    justify-content: center;
+    margin: 27px 0 0;
+    font: 28px/1.42 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 26px;
+    }
+
+    @include xxs {
+      font-size: 22px;
+    }
+  }
+
+  .ctaButton {
+    display: flex;
+    justify-content: center;
+    margin: 90px 0 0;
+    width: 235.953125px;
+    max-width: 85%;
+    font: 400 20px/1 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    background-color: rgb(32 145 249);
+    border-radius: 26px;
+    padding: 16px;
+    letter-spacing: 0.2px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xs {
+      margin: 80px 0 0;
+    }
+
+    @include xxs {
+      margin: 61px 0 0;
+      font-size: 16px;
+    }
+
+    @include tn {
+      margin: 38px 0 0;
+      padding: 16px 8px;
+    }
+  }
+
+  .ctaButton:hover {
+    transform: scale(1.1);
+  }
+
+  .featuresSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .featuresContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 12px auto 78px;
+    width: 1178px;
+    max-width: 85%;
+
+    @include xs {
+      column-gap: 0;
+      margin: 132px auto 78px;
+    }
+
+    @include tn {
+      margin: 132px auto 50px;
+    }
+  }
+
+  .mainFeatureTitle {
+    display: flex;
+    justify-content: center;
+    font: 400 48px/1.14 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 44px;
+    }
+
+    @include xs {
+      flex: 0 1 auto;
+      order: 1;
+    }
+
+    @include xxs {
+      font-size: 36px;
+    }
+  }
+
+  .calendarDescription {
+    display: flex;
+    justify-content: center;
+    margin: 27px 0 0;
+    width: 509px;
+    max-width: 85%;
+    font: 400 28px/1.42 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 26px;
+    }
+
+    @include xs {
+      flex: 0 1 auto;
+      order: 2;
+    }
+
+    @include xxs {
+      font-size: 22px;
+    }
+  }
+
+  .featuresRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    margin: 90px 0 0;
+    width: 832.015625px;
+    max-width: 85%;
+
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px 10px;
+      margin: 50px 0 0;
+    }
+
+    @include xs {
+      flex: 0 1 auto;
+      order: 4;
+      margin: 80px 0 0;
+    }
+
+    @include tn {
+      margin: 50px 0 0;
+    }
+  }
+
+  .featureColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+    width: 218px;
+    min-width: 0;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .featureImage {
+    width: 61px;
+    max-width: 85%;
+    height: 61px;
+    object-fit: cover;
+  }
+
+  .featureTitle {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 85%;
+    height: 56px;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    text-align: center;
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      height: 80px;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+
+    @include tn {
+      height: 60px;
+    }
+  }
+
+  .financialGoalDescription {
+    display: flex;
+    justify-content: center;
+    font: 400 18px/1.38 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 16px;
+    }
+  }
+
+  .contentBackground {
+    display: flex;
+    flex-direction: column;
+    margin: 106px 0 0;
+    width: 100%;
+    background: var(--src) center center / contain no-repeat;
+    border-radius: 44.81230545043945px;
+    filter: drop-shadow(
+      0 8.14769172668457px 63.14461135864258px rgb(0 0 0 / 14.9%)
+    );
+
+    @include sm {
+      margin: 56px 0 0;
+    }
+
+    @include xs {
+      flex: 0 1 auto;
+      order: 3;
+      margin: 80px 0 0;
+    }
+
+    @include tn {
+      margin: 50px 0 0;
+    }
+  }
+
+  .contentImage {
+    margin: 232px auto 238px;
+    width: 187px;
+    max-width: 85%;
+    object-fit: cover;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include md {
+      margin: 150px auto;
+    }
+
+    @include xs {
+      margin: 80px auto;
+      width: 90px;
+    }
+
+    @include tn {
+      margin: 50px auto;
+    }
+  }
+
+  .contentImage:hover {
+    transform: scale(1.1);
+  }
+
+  .organizationalSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contentRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    margin: 269px auto 268px;
+    width: 1221px;
+    max-width: 85%;
+
+    @include md {
+      flex-direction: column;
+      gap: 8px 10px;
+      margin: 150px auto;
+    }
+
+    @include xs {
+      gap: 34px 10px;
+      margin: 80px auto;
+    }
+
+    @include tn {
+      margin: 50px auto;
+    }
+  }
+
+  .textColumn {
+    display: flex;
+    flex-direction: column;
+    width: 509px;
+    min-width: 0;
+
+    @include lg {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .mainTitle {
+    width: 324px;
+    max-width: 85%;
+    font: 48px/1.14 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.2px;
+
+    @include lg {
+      width: 100%;
+      max-width: unset;
+    }
+
+    @include md {
+      align-items: flex-start;
+      font-size: 44px;
+    }
+
+    @include xxs {
+      font-size: 36px;
+    }
+  }
+
+  .subTitle {
+    margin: 27px 0 0;
+    font: 400 28px/1.42 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 26px;
+    }
+
+    @include xxs {
+      font-size: 22px;
+    }
+  }
+
+  .tryFreeBtn {
+    display: flex;
+    justify-content: center;
+    margin: 70px 0 0;
+    width: 236px;
+    max-width: 85%;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    background-color: rgb(32 145 249);
+    border-radius: 30px;
+    padding: 16px;
+    outline: 1px solid rgb(32 145 249);
+    outline-offset: -1px;
+    letter-spacing: 0.1px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xs {
+      width: 100%;
+      max-width: unset;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+
+    @include tn {
+      margin: 50px 0 0;
+      max-width: 100%;
+      padding: 16px 8px;
+    }
+  }
+
+  .tryFreeBtn:hover {
+    transform: scale(1.1);
+  }
+
+  .promoImage {
+    width: 661px;
+    min-width: 0;
+    object-fit: cover;
+
+    @include lg {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+      max-width: 661px;
+    }
+  }
+
+  .newsletterSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sectionContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1px auto 0;
+    width: 1440.078125px;
+    max-width: 85%;
+
+    @include xs {
+      max-width: 90%;
+    }
+
+    @include tn {
+      max-width: 85%;
+    }
+  }
+
+  .headerRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    margin: 150px auto 42px;
+    width: 89.38%;
+
+    @include lg {
+      flex-direction: column;
+      gap: 30px 10px;
+    }
+
+    @include xs {
+      margin: 80px auto 42px;
+    }
+
+    @include tn {
+      margin: 50px auto 42px;
+      width: 100%;
+    }
+  }
+
+  .brandLogo {
+    width: 712px;
+    min-width: 0;
+    object-fit: cover;
+
+    @include lg {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+      max-width: 712px;
+    }
+  }
+
+  .contentColumn {
+    display: flex;
+    flex-direction: column;
+    width: 462px;
+    min-width: 0;
+
+    @include lg {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .titlesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 17px 0;
+    width: 309px;
+    max-width: 85%;
+
+    @include lg {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+
+  .sectionTitle {
+    width: 100%;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+  }
+
+  .mainTitle1 {
+    font: 400 48px/1.14 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 44px;
+    }
+
+    @include xxs {
+      font-size: 36px;
+    }
+  }
+
+  .newsletterContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1px 0;
+    margin: 35px 0 0 10px;
+    width: 286px;
+    max-width: 85%;
+
+    @include lg {
+      width: 100%;
+      max-width: unset;
+    }
+
+    @include tn {
+      margin: 35px 0 0 8px;
+      max-width: 85%;
+    }
+  }
+
+  .newsletterTitle {
+    margin: 0 33px 0 0;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      margin: 0 32px 0 0;
+      font-size: 18px;
+    }
+
+    @include xs {
+      margin: 0 16px 0 0;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+
+    @include tn {
+      margin: 0 8px 0 0;
+    }
+  }
+
+  .newsletterSubtitle {
+    font: 400 18px/1.38 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 16px;
+    }
+  }
+
+  .emailSubscribeRow {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+    margin: 34px 0 0 10px;
+
+    @include xs {
+      flex-direction: column;
+      gap: 14px 12px;
+    }
+
+    @include tn {
+      margin: 34px 0 0;
+    }
+  }
+
+  .emailInputContainer_box {
+    flex: 1 1 auto;
+    width: 273px;
+    min-width: 0;
+    border-radius: 27px;
+    padding: 15px 39px;
+    outline: 1px solid rgb(232 232 232);
+    outline-offset: -1px;
+
+    @include md {
+      padding: 19px 32px;
+    }
+
+    @include xs {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+      padding: 19px 16px;
+    }
+
+    @include tn {
+      padding: 19px 14px;
+    }
+  }
+
+  .emailInputContainer {
+    width: 100%;
+    font: 400 14px/2 Roboto, Helvetica, Arial, serif;
+    color: rgb(24 23 29);
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    letter-spacing: 0.1px;
+    vertical-align: top;
+  }
+
+  .emailInputContainer:focus {
+    outline: none;
+  }
+
+  .subscribeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 167px;
+    min-width: 0;
+    font: 400 20px/1 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    background-color: rgb(32 145 249);
+    border-radius: 29px;
+    padding: 19px 16px;
+    letter-spacing: 0.2px;
+
+    @include xxl {
+      font-size: 20px;
+    }
+
+    @include md {
+      font-size: 18px;
+    }
+
+    @include xs {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+  }
+
+  .partnersSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainContent {
+    display: flex;
+    flex-direction: column;
+    margin: 1px auto 0;
+    width: 1440.078125px;
+    max-width: 85%;
+  }
+
+  .leftColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 130px auto 79px;
+    width: 1075.015625px;
+    max-width: 85%;
+
+    @include xs {
+      margin: 80px auto 79px;
+    }
+
+    @include tn {
+      margin: 50px auto;
+      max-width: 100%;
+    }
+  }
+
+  .titleColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px 0;
+    width: 509.015625px;
+    max-width: 85%;
+
+    @include tn {
+      max-width: 100%;
+    }
+  }
+
+  .partnersHeading {
+    display: flex;
+    justify-content: center;
+    font: 400 48px/1.14 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 44px;
+    }
+
+    @include xxs {
+      font-size: 36px;
+    }
+  }
+
+  .tagline {
+    display: flex;
+    justify-content: center;
+    font: 400 28px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 26px;
+    }
+
+    @include xxs {
+      font-size: 22px;
+    }
+  }
+
+  .rightColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 90px 0 0;
+    width: 100%;
+
+    @include xs {
+      gap: 8px 0;
+      margin: 80px 0 0;
+    }
+
+    @include tn {
+      margin: 50px 0 0;
+    }
+  }
+
+  .clientRowTop {
+    display: flex;
+    gap: 0 1px;
+    width: 99.26%;
+
+    @include lg {
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 1px;
+    }
+
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px 1px;
+    }
+  }
+
+  .clientBoxFirst {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    outline: 1px solid rgb(216 216 216);
+    outline-offset: -1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .clientInfoColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    margin: 31px 39px 31px 40px;
+
+    @include md {
+      margin: 31px 32px;
+    }
+
+    @include xs {
+      margin: 31px 16px;
+    }
+
+    @include tn {
+      margin: 31px 8px;
+    }
+  }
+
+  .clientNameLabel {
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    letter-spacing: 0.1px;
+  }
+
+  .clientLogoFirst {
+    width: 193px;
+    object-fit: cover;
+  }
+
+  .clientBoxSecond {
+    display: flex;
+    flex-direction: column;
+    width: 272px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    outline: 1px solid rgb(216 216 216);
+    outline-offset: -1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .clientInfoColumn1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    margin: 32px 39px 32px 40px;
+
+    @include md {
+      margin: 32px;
+    }
+
+    @include xs {
+      margin: 32px 16px;
+    }
+
+    @include tn {
+      margin: 32px 8px;
+    }
+  }
+
+  .clientLogoSecond {
+    width: 193px;
+    object-fit: cover;
+  }
+
+  .clientBoxThird {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    outline: 1px solid rgb(216 216 216);
+    outline-offset: -1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .clientInfoColumn2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    margin: 25px 39px 24px 40px;
+
+    @include md {
+      margin: 25px 32px 24px;
+    }
+
+    @include xs {
+      margin: 25px 16px 24px;
+    }
+
+    @include tn {
+      margin: 25px 8px 24px;
+    }
+  }
+
+  .clientLogoThird {
+    width: 221px;
+    object-fit: cover;
+  }
+
+  .clientBoxFourth {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    outline: 1px solid rgb(216 216 216);
+    outline-offset: -1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .clientInfoColumn3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    margin: 25px 40px;
+
+    @include md {
+      margin: 25px 32px;
+    }
+
+    @include xs {
+      margin: 25px 16px;
+    }
+
+    @include tn {
+      margin: 25px 8px;
+    }
+  }
+
+  .clientLogoFourth {
+    width: 140px;
+    object-fit: cover;
+
+    @include md {
+      max-width: 100%;
+    }
+  }
+
+  .clientRowBottom {
+    display: flex;
+    gap: 0 1px;
+    width: 100%;
+
+    @include lg {
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 1px;
+    }
+
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+      gap: 8px 1px;
+    }
+
+    @include xxs {
+      display: none;
+    }
+  }
+
+  .clientBoxFifth {
+    display: flex;
+    flex-direction: column;
+    width: 308px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    outline: 1px solid rgb(216 216 216);
+    outline-offset: -1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .clientInfoColumn4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    margin: 40px 39px 40px 40px;
+
+    @include md {
+      margin: 40px 32px;
+    }
+
+    @include xs {
+      margin: 40px 16px;
+    }
+
+    @include tn {
+      margin: 40px 8px;
+    }
+  }
+
+  .clientLogoFifth {
+    width: 229px;
+    object-fit: cover;
+  }
+
+  .clientBoxSixth {
+    display: flex;
+    flex-direction: column;
+    width: 272px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    outline: 1px solid rgb(216 216 216);
+    outline-offset: -1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .clientLogoSixth {
+    width: 193px;
+    object-fit: cover;
+  }
+
+  .clientBoxSeventh {
+    display: flex;
+    flex-direction: column;
+    width: 219px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    outline: 1px solid rgb(216 216 216);
+    outline-offset: -1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .clientInfoColumn5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    margin: 25px 39px 25px 40px;
+
+    @include md {
+      margin: 25px 32px;
+    }
+
+    @include xs {
+      margin: 25px 16px;
+    }
+
+    @include tn {
+      margin: 25px 8px;
+    }
+  }
+
+  .clientLogoSeventh {
+    width: 140px;
+    object-fit: cover;
+  }
+
+  .clientBoxEighth {
+    display: flex;
+    flex-direction: column;
+    width: 273px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    outline: 1px solid rgb(216 216 216);
+    outline-offset: -1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .clientInfoColumn6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px 0;
+    margin: 32px 40px;
+
+    @include md {
+      margin: 32px;
+    }
+
+    @include xs {
+      margin: 32px 16px;
+    }
+
+    @include tn {
+      margin: 32px 8px;
+    }
+  }
+
+  .clientLogoEighth {
+    width: 193px;
+    object-fit: cover;
+  }
+
+  .tryFreeButton {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 0;
+    width: 235.953125px;
+    max-width: 85%;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    background-color: rgb(32 145 249);
+    border-radius: 30px;
+    padding: 16px;
+    outline: 1px solid rgb(32 145 249);
+    outline-offset: -1px;
+    letter-spacing: 0.1px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      margin: 50px 0 0;
+      font-size: 16px;
+    }
+
+    @include tn {
+      padding: 16px 8px;
+    }
+  }
+
+  .tryFreeButton:hover {
+    transform: scale(1.1);
+  }
+
+  .testimonialSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonialContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1px auto 0;
+    width: 1439px;
+    max-width: 85%;
+  }
+
+  .testimonialContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 111px auto 99px;
+    width: 923px;
+    max-width: 85%;
+
+    @include xs {
+      margin: 80px auto;
+    }
+
+    @include tn {
+      margin: 50px auto;
+      max-width: 100%;
+    }
+  }
+
+  .testimonialHeader {
+    display: flex;
+    justify-content: center;
+    font: 400 48px/1.14 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 44px;
+    }
+
+    @include xxs {
+      font-size: 36px;
+    }
+  }
+
+  .testimonialImage {
+    margin: 90px 0 0;
+    width: 148.96875px;
+    max-width: 85%;
+    object-fit: cover;
+
+    @include xs {
+      margin: 80px 0 0;
+    }
+
+    @include tn {
+      margin: 50px 0 0;
+    }
+  }
+
+  .testimonialDescription {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0 0;
+    font: 400 28px/1.42 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 26px;
+    }
+
+    @include xxs {
+      font-size: 22px;
+    }
+
+    @include tn {
+      margin: 50px 0 0;
+    }
+  }
+
+  .testimonialRow {
+    display: flex;
+    align-items: center;
+    gap: 0 13px;
+    margin: 62px 0 0;
+    width: 179.984375px;
+    max-width: 85%;
+
+    @include tn {
+      column-gap: 8px;
+      margin: 50px 0 0;
+    }
+  }
+
+  .testimonialIcon {
+    width: 50px;
+    min-width: 0;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .testimonialTextColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 2px 0;
+    width: 117px;
+    min-width: 0;
+  }
+
+  .testimonialHighlightTitle {
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    letter-spacing: 0.1px;
+  }
+
+  .testimonialHighlightSubtitle {
+    margin: 0 40px 0 0;
+    font: 400 15px/1.86 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.2px;
+
+    @include md {
+      margin: 0 32px 0 0;
+    }
+
+    @include xs {
+      margin: 0 16px 0 0;
+    }
+
+    @include tn {
+      margin: 0 8px 0 0;
+    }
+  }
+
+  .testimonialButton {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0 0;
+    width: 262.953125px;
+    max-width: 85%;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    background-color: rgb(32 145 249);
+    border-radius: 30px;
+    padding: 16px;
+    letter-spacing: 0.1px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+
+    @include tn {
+      margin: 50px 0 0;
+      padding: 16px 8px;
+    }
+  }
+
+  .testimonialButton:hover {
+    transform: scale(1.1);
+  }
+
+  .pricingSection {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37 43 66);
+  }
+
+  .pricingColumnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px 0;
+    margin: 111px auto 99px;
+    width: 1105px;
+    max-width: 85%;
+
+    @include lg {
+      max-width: 95%;
+    }
+
+    @include md {
+      max-width: 80%;
+    }
+
+    @include xs {
+      gap: 80px 0;
+      margin: 80px auto;
+    }
+
+    @include tn {
+      gap: 50px 0;
+      margin: 50px auto;
+      max-width: 85%;
+    }
+  }
+
+  .pricingHeaderContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px 0;
+    width: 508.953125px;
+    max-width: 85%;
+  }
+
+  .pricingMainTitle {
+    display: flex;
+    justify-content: center;
+    font: 400 48px/1.14 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 44px;
+    }
+
+    @include xxs {
+      font-size: 36px;
+    }
+  }
+
+  .pricingSubTitle {
+    display: flex;
+    justify-content: center;
+    font: 400 28px/1.42 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 26px;
+    }
+
+    @include xxs {
+      font-size: 22px;
+    }
+  }
+
+  .pricingRowContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    width: 100%;
+
+    @include md {
+      flex-direction: column;
+      gap: 30px 10px;
+    }
+  }
+
+  .freePriceCard {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    border-radius: 10px;
+    outline: 1px solid rgb(222 222 222);
+    outline-offset: -1px;
+    box-shadow: 0 13px 19px 0 rgb(0 0 0 / 6.6%);
+
+    @include md {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .freeCardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px 0;
+    margin: 43px 40px 40px;
+
+    @include md {
+      margin: 43px 32px 40px;
+    }
+
+    @include xs {
+      margin: 43px 16px 40px;
+    }
+
+    @include tn {
+      margin: 43px 8px 40px;
+    }
+  }
+
+  .freeCardHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 142px;
+    max-width: 85%;
+  }
+
+  .freePlanNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px 0;
+    width: 100%;
+  }
+
+  .freePlanName {
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+  }
+
+  .freePlanDescription {
+    display: flex;
+    justify-content: center;
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.1px;
+  }
+
+  .freePriceContainer {
+    display: flex;
+    gap: 0 10px;
+    margin: 19px 0 0;
+    width: 90.13%;
+
+    @include tn {
+      column-gap: 8px;
+    }
+  }
+
+  .freePriceAmount {
+    min-width: 0;
+    font: 700 74px/1.13 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.2px;
+  }
+
+  .freePriceDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px 0;
+    margin: 11px 0 22px;
+    width: 75px;
+    min-width: 0;
+  }
+
+  .freeCurrencySymbol {
+    width: 100%;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+  }
+
+  .freePriceFrequency {
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    letter-spacing: 0.1px;
+  }
+
+  .freeFeaturesList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+    margin: 28px 0 0;
+    width: 104px;
+    max-width: 85%;
+  }
+
+  .freeFeatureItem {
+    font: 400 15px/1.86 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.2px;
+  }
+
+  .freeOrderButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font: 400 20px/1 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    background-color: rgb(32 145 249);
+    border-radius: 28px;
+    padding: 18px 16px;
+    letter-spacing: 0.2px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+
+    @include tn {
+      padding: 18px 8px;
+    }
+  }
+
+  .freeOrderButton:hover {
+    transform: scale(1.1);
+  }
+
+  .standardPriceCard {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    min-width: 0;
+    background-color: rgb(32 145 249);
+    border-radius: 10px;
+    outline: 1px solid rgb(222 222 222);
+    outline-offset: -1px;
+    box-shadow: 0 13px 19px 0 rgb(0 0 0 / 6.6%);
+
+    @include md {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .standardCardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px 0;
+    margin: 86px 40px 83px;
+
+    @include md {
+      margin: 86px 32px 83px;
+    }
+
+    @include xs {
+      margin: 80px 16px;
+    }
+
+    @include tn {
+      margin: 50px 8px;
+    }
+  }
+
+  .standardCardHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 171px;
+    max-width: 85%;
+  }
+
+  .standardPlanNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px 0;
+    width: 141.984375px;
+    max-width: 85%;
+  }
+
+  .standardPlanName {
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+  }
+
+  .standardPlanDescription {
+    display: flex;
+    justify-content: center;
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    letter-spacing: 0.1px;
+  }
+
+  .standardPriceContainer {
+    display: flex;
+    gap: 0 10px;
+    margin: 19px 0 0;
+    width: 100%;
+
+    @include tn {
+      column-gap: 8px;
+    }
+  }
+
+  .standardPriceAmount {
+    min-width: 0;
+    font: 700 74px/1.13 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.2px;
+  }
+
+  .standardPriceDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px 0;
+    margin: 11px 0 22px;
+    width: 75px;
+    min-width: 0;
+  }
+
+  .standardCurrencySymbol {
+    width: 100%;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+  }
+
+  .standardPriceFrequency {
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.1px;
+  }
+
+  .standardFeaturesList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+    margin: 28px 0 0;
+    width: 104px;
+    max-width: 85%;
+  }
+
+  .standardFeatureItem {
+    font: 400 15px/1.86 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.2px;
+  }
+
+  .standardOrderButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font: 400 20px/1 Roboto, Helvetica, Arial, serif;
+    color: rgb(32 145 249);
+    text-align: center;
+    background-color: rgb(255 255 255);
+    border-radius: 28px;
+    padding: 18px 16px;
+    letter-spacing: 0.2px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+
+    @include tn {
+      padding: 18px 8px;
+    }
+  }
+
+  .standardOrderButton:hover {
+    transform: scale(1.1);
+  }
+
+  .businessPriceCard {
+    display: flex;
+    flex-direction: column;
+    width: 335px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    border-radius: 10px;
+    outline: 1px solid rgb(222 222 222);
+    outline-offset: -1px;
+    box-shadow: 0 13px 19px 0 rgb(0 0 0 / 6.6%);
+
+    @include md {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .businessCardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px 0;
+    margin: 43px 40px 40px;
+
+    @include md {
+      margin: 43px 32px 40px;
+    }
+
+    @include xs {
+      margin: 43px 16px 40px;
+    }
+
+    @include tn {
+      margin: 43px 8px 40px;
+    }
+  }
+
+  .businessCardHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 171px;
+    max-width: 85%;
+  }
+
+  .businessPlanNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px 0;
+    width: 141.984375px;
+    max-width: 85%;
+  }
+
+  .businessPlanName {
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+  }
+
+  .businessPlanDescription {
+    display: flex;
+    justify-content: center;
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.1px;
+  }
+
+  .businessPriceContainer {
+    display: flex;
+    gap: 0 10px;
+    margin: 19px 0 0;
+    width: 100%;
+
+    @include tn {
+      column-gap: 8px;
+    }
+  }
+
+  .businessPriceAmount {
+    min-width: 0;
+    font: 700 74px/1.13 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.2px;
+  }
+
+  .businessPriceDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px 0;
+    margin: 11px 0 22px;
+    width: 75px;
+    min-width: 0;
+  }
+
+  .businessCurrencySymbol {
+    width: 100%;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+  }
+
+  .businessPriceFrequency {
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    letter-spacing: 0.1px;
+  }
+
+  .businessFeaturesList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+    margin: 28px 0 0;
+    width: 104px;
+    max-width: 85%;
+  }
+
+  .businessFeatureItem {
+    font: 400 15px/1.86 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.2px;
+  }
+
+  .businessOrderButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font: 400 20px/1 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    background-color: rgb(32 145 249);
+    border-radius: 28px;
+    padding: 18px 16px;
+    letter-spacing: 0.2px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+
+    @include tn {
+      padding: 18px 8px;
+    }
+  }
+
+  .businessOrderButton:hover {
+    transform: scale(1.1);
+  }
+
+  .contactUsSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sectionContainer1 {
+    display: flex;
+    flex-direction: column;
+    margin: 1px auto 0;
+    width: 1440.078125px;
+    max-width: 85%;
+
+    @include tn {
+      max-width: 90%;
+    }
+  }
+
+  .contactContentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px 0;
+    margin: 213px auto 101px;
+    width: 1179.125px;
+    max-width: 85%;
+
+    @include md {
+      margin: 150px auto 101px;
+    }
+
+    @include xs {
+      margin: 80px auto;
+    }
+
+    @include xxs {
+      max-width: 100%;
+    }
+
+    @include tn {
+      gap: 50px 0;
+      margin: 50px auto;
+    }
+  }
+
+  .headerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 27px 0;
+    width: 509.015625px;
+    max-width: 85%;
+  }
+
+  .mainTitle2 {
+    display: flex;
+    justify-content: center;
+    font: 400 48px/1.14 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 44px;
+    }
+
+    @include xxs {
+      font-size: 36px;
+    }
+  }
+
+  .subtitle {
+    display: flex;
+    justify-content: center;
+    font: 400 28px/1.42 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 26px;
+    }
+
+    @include xxs {
+      font-size: 22px;
+    }
+  }
+
+  .formRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    width: 100%;
+
+    @include md {
+      flex-direction: column;
+      gap: 30px 10px;
+    }
+  }
+
+  .formBox {
+    display: flex;
+    flex-direction: column;
+    width: 453px;
+    min-width: 0;
+    background-color: rgb(255 255 255);
+    border-radius: 20px;
+    outline: 1px solid rgb(221 221 221);
+    outline-offset: -1px;
+    box-shadow: 0 13px 19px 0 rgb(0 0 0 / 6.6%);
+
+    @include md {
+      flex: 0 1 auto;
+      order: 3;
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .formColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 45px 0;
+    margin: 52px auto;
+    width: 352.96875px;
+    max-width: 85%;
+
+    @include sm {
+      gap: 20px 0;
+    }
+
+    @include tn {
+      gap: 45px 0;
+      margin: 50px auto;
+    }
+  }
+
+  .formTitle {
+    margin: 0 auto;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(37 43 66);
+    letter-spacing: 0.1px;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+  }
+
+  .nameFieldWrapper_box {
+    border-radius: 27px;
+    padding: 15px 20px;
+    outline: 1px solid rgb(232 232 232);
+    outline-offset: -1px;
+
+    @include xs {
+      padding: 19px 16px;
+    }
+
+    @include tn {
+      padding: 19px 8px;
+    }
+  }
+
+  .nameFieldWrapper {
+    width: 100%;
+    font: 400 15px/2 Roboto, Helvetica, Arial, serif;
+    color: rgb(24 23 29);
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    letter-spacing: 0.1px;
+    vertical-align: top;
+  }
+
+  .nameFieldWrapper:focus {
+    outline: none;
+  }
+
+  .emailFieldWrapper_box {
+    border-radius: 27px;
+    padding: 15px 20px;
+    outline: 1px solid rgb(232 232 232);
+    outline-offset: -1px;
+
+    @include xs {
+      padding: 19px 16px;
+    }
+
+    @include tn {
+      padding: 19px 8px;
+    }
+  }
+
+  .emailFieldWrapper {
+    width: 100%;
+    font: 400 15px/2 Roboto, Helvetica, Arial, serif;
+    color: rgb(24 23 29);
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    letter-spacing: 0.1px;
+    vertical-align: top;
+  }
+
+  .emailFieldWrapper:focus {
+    outline: none;
+  }
+
+  .messageFieldWrapper_box {
+    padding: 15px 20px 154px;
+    outline: 1px solid rgb(232 232 232);
+    outline-offset: -1px;
+
+    @include md {
+      padding: 23px 20px 150px;
+    }
+
+    @include xs {
+      padding: 23px 16px 80px;
+    }
+
+    @include tn {
+      padding: 23px 8px 50px;
+    }
+  }
+
+  .messageFieldWrapper {
+    width: 100%;
+    font: 400 15px/2 Roboto, Helvetica, Arial, serif;
+    color: rgb(24 23 29);
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    letter-spacing: 0.1px;
+    vertical-align: top;
+  }
+
+  .messageFieldWrapper:focus {
+    outline: none;
+  }
+
+  .submitButton {
+    display: flex;
+    justify-content: center;
+    width: 145px;
+    max-width: 85%;
+    font: 400 20px/1 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    text-align: center;
+    background-color: rgb(32 145 249);
+    border-radius: 28px;
+    padding: 18px 16px;
+    letter-spacing: 0.2px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include md {
+      align-items: flex-start;
+      width: 100%;
+      max-width: unset;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 16px;
+    }
+
+    @include tn {
+      padding: 18px 8px;
+    }
+  }
+
+  .submitButton:hover {
+    transform: scale(1.1);
+  }
+
+  .contactInfoColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px 0;
+    width: 666px;
+    min-width: 0;
+
+    @include lg {
+      width: 444px;
+    }
+
+    @include md {
+      flex: 0 1 auto;
+      order: 1;
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+
+    @include tn {
+      gap: 50px 0;
+    }
+  }
+
+  .contactDetailsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 10px;
+    width: 100%;
+
+    @include lg {
+      flex-direction: column;
+      gap: 30px 10px;
+      width: 80%;
+    }
+  }
+
+  .addressColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+    width: 271px;
+    min-width: 0;
+
+    @include xl {
+      width: 171px;
+    }
+
+    @include lg {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+
+    @include sm {
+      flex-direction: row;
+      column-gap: 8px;
+    }
+  }
+
+  .addressIcon {
+    flex: 0 0 auto;
+    width: 26px;
+    max-width: 85%;
+    height: 32px;
+    object-fit: cover;
+
+    @include sm {
+      margin-top: unset;
+      margin-right: unset;
+      margin-bottom: unset;
+      margin-left: unset;
+    }
+  }
+
+  .addressText {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-right: unset;
+      margin-bottom: unset;
+      margin-left: unset;
+    }
+  }
+
+  .phoneColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 21px 0;
+    width: 111px;
+    min-width: 0;
+
+    @include lg {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+
+    @include sm {
+      flex-direction: row;
+      column-gap: 8px;
+    }
+  }
+
+  .phoneIcon {
+    flex: 0 0 auto;
+    width: 20px;
+    max-width: 85%;
+    height: 32px;
+    object-fit: cover;
+
+    @include sm {
+      margin-top: unset;
+      margin-right: unset;
+      margin-bottom: unset;
+      margin-left: unset;
+    }
+  }
+
+  .phoneNumberText {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-right: unset;
+      margin-bottom: unset;
+      margin-left: unset;
+    }
+  }
+
+  .emailColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+    width: 214px;
+    min-width: 0;
+
+    @include lg {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+
+    @include sm {
+      flex-direction: row;
+      column-gap: 8px;
+    }
+  }
+
+  .emailIcon {
+    flex: 0 0 auto;
+    width: 27px;
+    max-width: 85%;
+    height: 22px;
+    object-fit: cover;
+
+    @include sm {
+      margin-top: unset;
+      margin-right: unset;
+      margin-bottom: unset;
+      margin-left: unset;
+    }
+  }
+
+  .emailText {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    font: 400 16px/1.43 Roboto, Helvetica, Arial, serif;
+    color: rgb(55 71 84);
+    text-align: center;
+    letter-spacing: 0.1px;
+
+    @include sm {
+      margin-top: unset;
+      margin-right: unset;
+      margin-bottom: unset;
+      margin-left: unset;
+    }
+  }
+
+  .mapIframe {
+    display: flex;
+    flex-direction: column;
+    width: 77.48%;
+    max-width: 85%;
+    aspect-ratio: 1;
+  }
+
+  .socialMediaRow {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+    width: 100%;
+
+    @include lg {
+      width: 80%;
+    }
+
+    @include md {
+      justify-content: center;
+      column-gap: 24px;
+    }
+
+    @include xs {
+      column-gap: 16px;
+    }
+
+    @include tn {
+      column-gap: 8px;
+    }
+  }
+
+  .facebookIcon {
+    width: 41px;
+    min-width: 0;
+    height: 41px;
+    object-fit: cover;
+  }
+
+  .contactSection {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37 43 66);
+  }
+
+  .mainContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 10px;
+    margin: 151px auto 150px;
+    width: 991px;
+    max-width: 85%;
+    padding: 0 7px 0 0;
+
+    @include md {
+      margin: 150px auto;
+    }
+
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px 10px;
+    }
+
+    @include xs {
+      margin: 80px auto;
+    }
+
+    @include tn {
+      gap: 70px 10px;
+      margin: 50px auto;
+    }
+  }
+
+  .gridContainer {
+    display: grid;
+    align-content: start;
+    column-gap: 24px;
+    margin: 10px 0 0;
+    width: 518px;
+    min-width: 0;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    @include mq-between(xxl, max) {
+      row-gap: 0;
+    }
+
+    @include xxl {
+      row-gap: 0;
+    }
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+
+    @include xs {
+      column-gap: 16px;
+    }
+
+    @include xxs {
+      gap: 36px 26px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include tn {
+      gap: 66px 8px;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  .menuList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  .menuTitle {
+    display: flex;
+    min-width: 0;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.1px;
+
+    @include tn {
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  .flexColMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+    margin: 0 3px 0 0;
+
+    @include tn {
+      justify-content: center;
+      column-gap: 0;
+    }
+  }
+
+  .menuItem {
+    display: flex;
+    font: 400 15px/1.86 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.2px;
+
+    @include tn {
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+
+  .teamMemberList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  .memberTitle {
+    display: flex;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.1px;
+
+    @include tn {
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  .flexColMembers {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+
+  .memberName {
+    display: flex;
+    min-width: 0;
+    font: 400 15px/1.86 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.2px;
+
+    @include tn {
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+
+  .contactInfoList {
+    display: flex;
+    flex-direction: column;
+    gap: 25px 0;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+
+  .contactTitle {
+    display: flex;
+    font: 700 20px/1.4 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.1px;
+
+    @include tn {
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  .flexColContacts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px 0;
+  }
+
+  .contactItem {
+    display: flex;
+    font: 400 15px/1.86 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.2px;
+
+    @include tn {
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+      font-size: 15px;
+    }
+  }
+
+  .informationColumn {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 93px;
+    width: 277px;
+    min-width: 0;
+
+    @include sm {
+      margin-top: unset;
+      margin-bottom: unset;
+      width: 100%;
+    }
+  }
+
+  .addressRow {
+    display: flex;
+    align-items: center;
+    gap: 0 8px;
+  }
+
+  .addressIcon1 {
+    width: 46px;
+    min-width: 0;
+    height: 46px;
+    object-fit: cover;
+  }
+
+  .addressText1 {
+    min-width: 0;
+    font: 400 15px/1.8 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.1px;
+  }
+
+  .phoneRow {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    margin: 16px 0 0;
+
+    @include tn {
+      column-gap: 8px;
+    }
+  }
+
+  .phoneIcon1 {
+    width: 35px;
+    min-width: 0;
+    height: 35px;
+    object-fit: cover;
+  }
+
+  .phoneText {
+    flex: 1 1 auto;
+    min-width: 0;
+    font: 400 15px/1.8 Roboto, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+    letter-spacing: 0.2px;
+  }
+
+  .socialMediaRow1 {
+    display: flex;
+    align-items: center;
+    gap: 0 24px;
+    margin: 36px 0 0;
+
+    @include xs {
+      justify-content: center;
+      column-gap: 16px;
+    }
+
+    @include tn {
+      column-gap: 8px;
+    }
+  }
+}
